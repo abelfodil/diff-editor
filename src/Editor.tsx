@@ -3,14 +3,17 @@ import { MonacoDiffEditor } from "react-monaco-editor";
 import LanguageSelector from "./LanguageSelector";
 
 const Editor = () => {
+    const [language, setLanguage] = React.useState('javascript');
+
     return (
         <div>
-            <LanguageSelector />
+            <LanguageSelector onLanguageChange={setLanguage} />
             <MonacoDiffEditor
                 width="1200"
                 height="800"
-                language="javascript"
-                options={{ theme: "vs-dark", originalEditable: true }}
+                theme="vs-dark"
+                language={language}
+                options={{ originalEditable: true }}
             />
         </div>
     );
