@@ -7,7 +7,7 @@ const Editor = () => (
           width="1200"
           height="800"
           language="javascript"
-          options={{originalEditable: true}}
+          options={{theme: "vs-dark", originalEditable: true}}
         />
   </div>
 );
