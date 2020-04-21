@@ -9,8 +9,7 @@ const Editor = () => {
         <div>
             <LanguageSelector onLanguageChange={setLanguage} />
             <MonacoDiffEditor
-                width="1200"
-                height="800"
+                height="90vh"
                 theme="vs-dark"
                 language={language}
                 options={{ originalEditable: true }}
