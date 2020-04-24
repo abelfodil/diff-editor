@@ -1,8 +1,13 @@
 import React from "react";
 import { MonacoDiffEditor } from "react-monaco-editor";
 import LanguageSelector from "./LanguageSelector";
+import { DiffContent } from "./DiffContent";
 
-const Editor = () => {
+interface EditorProps {
+    diffContent?: DiffContent;
+}
+
+const Editor = (props: EditorProps) => {
     const [language, setLanguage] = React.useState('javascript');
 
     return (
